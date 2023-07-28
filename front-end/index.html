@@ -1,20 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta name="description" content="Webpage description goes here" />
+  <head>
     <meta charset="utf-8">
-    <title>Change_me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Noviti Finance</title>
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="/inc/bootstrap.min.css">
+    <link rel="stylesheet" href="/inc/style.css">
 </head>
+  <body class="bg-dark">
+    <nav class="navbar bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="/inc/noviti-logo.png" height="50">
+          </a>
+        </div>
+    </nav>
 
-<body>
+    <div class="container mt-3">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Loan Schedule Generator</h1>
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Loan Schedule Generator App</h5>
+                    <p class="card-text">
+                      The "Loan Schedule Generator" is a user-friendly web application that helps calculate and display the repayment schedule for loans. By entering the loan amount, yearly interest rate, and loan term in months, users can instantly generate a comprehensive schedule. The application presents a clear breakdown for each month, including the remaining credit amount, principal part, interest, and total payment. It empowers users to make informed financial decisions and visualize how their loan will be paid off over time. The tool is accessible on both desktop and mobile devices, ensuring convenience for all users. By modifying the inputs and clicking the "Generate Loan Schedule" button, users can quickly explore different loan scenarios. The application's accurate and convenient calculations make it a valuable tool for managing personal finances and planning loan repayments effectively. (C) Noviti Finance
+                    </div>
+                </div>
+          </div>
+            <div class="col-md-12">
+                <form id="loanForm">
+                    <label for="loanAmount">Loan Amount (EUR)</label>
+                    <input type="number" id="loanAmount" name="loanAmount" min="5000" max="50000" step="1" required>
+                    
+                    <label for="yearlyInterest">Yearly Interest (%)</label>
+                    <input type="number" id="yearlyInterest" name="yearlyInterest" step="0.01" required>
+                    
+                    <label for="term">Term (months)</label>
+                    <input type="number" id="term" name="term" min="1" max="60" step="1" required>
+                    
+                    <button type="submit">Generate Loan Schedule</button>
+                </form>
+            
+                <div id="result"></div>
+            </div>
+        </div>
+    </div>
 
-<div class="container">
+    <!-- Noviti Custom Functions -->
 
-</div>
-
-<script>
-</script>
-
-</body>
+    <!-- Bootstrap Javascript-->
+    <script src="/inc/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
