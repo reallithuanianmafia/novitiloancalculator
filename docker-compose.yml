@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+    noviti-app:
+        container_name: noviti-app
+        volumes:
+            - ./rest-api:/var/www/symfony
+        ports:
+            - "8080:80"
+        build:
+            dockerfile: docker/app/Dockerfile
+
+    noviti-front:
+        image: nginx
+        ports:
+            - 8000:80
+        volumes:
+            - ./front-end:/usr/share/nginx/html
+
+
+
+networks:
+    default:
+        name: noviti-task
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.33.88.0/24
